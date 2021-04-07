@@ -6,9 +6,15 @@
 </head>
 <body>
 <div>
-    <video playsinline autoplay></video>
-    <button>Take snapshot</button>
-    <canvas></canvas>
+    <div>
+        <video playsinline autoplay></video>
+    </div>
+    <div>
+        <button style="min-width: 20vw; min-height: 10vw; font-size: 10vw">Take snapshot</button>
+    </div>
+    <div>
+        <canvas></canvas>
+    </div>
 </div>
 <script>
     const video = document.querySelector('video');
@@ -21,7 +27,7 @@
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-        setTimeout(() => window.close(), 10000);
+        // setTimeout(() => window.close(), 10000);
     };
 
     const constraints = {
